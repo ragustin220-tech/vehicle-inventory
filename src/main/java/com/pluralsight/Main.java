@@ -39,6 +39,33 @@ public class Main {
 
         choice = sc.nextInt();
         sc.nextLine();
+
+        switch (choice){
+            case 1:
+                System.out.println("Inventory");
+                for (int i = 0; i < vehicleCount; i++){
+                    vehicle v = inventory[i];
+                    System.out.println("ID: "+ v.getVehicleId() + " | " + v.getColor() + " " + v.getMakeModel()+" | Mileage: "+ v.getOdometerReading()+" | Price: $"+v.getPrice());
+                }
+                break;
+            case 2:
+                System.out.println();
+                break;
+            case 3:
+                System.out.println();
+                break;
+            case 4:
+                System.out.println();
+                break;
+            case 5:
+                System.out.println();
+                break;
+            case 6:
+                System.out.println();
+                break;
+            default:
+                System.out.println("Invalid choice. Please enter a number between 1 and 6.");
+        }
     }
     }
 }
