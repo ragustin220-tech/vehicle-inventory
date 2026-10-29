@@ -49,7 +49,8 @@ public class Main {
                 }
                 break;
             case 2:
-                System.out.println();
+                System.out.println("Price Range");
+
                 break;
             case 3:
                 System.out.println();
@@ -58,7 +59,23 @@ public class Main {
                 System.out.println();
                 break;
             case 5:
-                System.out.println();
+                System.out.println("Add new vehicle");
+                System.out.print("Enter vehicle id: ");
+                long newId = sc.nextLong();
+                sc.nextLine();
+                System.out.print("Enter make/model: ");
+                String newModel = sc.nextLine();
+                System.out.print("Enter color: ");
+                String newColor = sc.nextLine();
+                System.out.print("Enter odometer reading:");
+                int newOdometer =sc.nextInt();
+                System.out.print("Enter price:");
+                double newPrice = sc.nextDouble();
+                sc.nextLine();
+
+                inventory[vehicleCount] = new vehicle(newId, newModel, newColor, newOdometer, newPrice);
+
+                vehicleCount++;
                 break;
             case 6:
                 System.out.println();
@@ -68,4 +85,4 @@ public class Main {
         }
     }
     }
-}
+    }
